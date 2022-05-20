@@ -13,11 +13,14 @@
             <input type="text" class="form-control" name="prenom" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Genre</label>
-            <select name="genre" id="" selected>
-                <option value="homme">Homme</option>
-                <option value="genre">Femme</option>
+            <label class="col-sm-3 control-label">GENRE</label>
+            <div class="col-sm-12">
+            <select class="form-select" type="text" aria-label="Default select example" name="genre" >
+            <option selected > Genre </option>
+            <option value="Masculin">Masculin</option>
+            <option value="Feminin">Feminin</option>
             </select>
+            </div>
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Poste</label>
@@ -39,7 +42,7 @@
               <button type="reset" class="btn btn-danger">Supprimer</button>
               </div>
           </div>
-        
+
       </form>
 </div>
 
