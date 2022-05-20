@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PersonnelController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { 
     return view('welcome');
 });
+
+Route::get('liste_personnel', [PersonnelController::class, 'index'])->name('liste');
+
+Route::get('formulaire_personnel', [PersonnelController::class, 'create'])->name('formulaire');
+
+Route::post('insertion', [PersonnelController::class, 'store'])->name('insertion');
+
+
