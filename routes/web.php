@@ -15,7 +15,7 @@ use App\Http\Controllers\PersonnelController;
 |
 */
 
-Route::get('/', function () { 
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -25,4 +25,10 @@ Route::get('formulaire_personnel', [PersonnelController::class, 'create'])->name
 
 Route::post('insertion', [PersonnelController::class, 'store'])->name('insertion');
 
+Route::get('/supprimer', [PersonnelController::class, 'destroy'])->name('supprimer');
 
+Route::delete('/personnel/{id}', 'PersonnelController@destroy')->name('personnels.destroy');
+
+
+
+// Route::resource('gestion_personnel', [PersonnelController::class]);

@@ -17,10 +17,11 @@ class CreatePersonnelsTable extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('genre'); 
+            $table->string('genre');
             $table->string('poste');
             $table->string('titre');
             $table->string('matricule');
+            $table->string('photo',300);
             $table->timestamps();
         });
     }

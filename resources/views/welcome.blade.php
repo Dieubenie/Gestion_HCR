@@ -1,5 +1,5 @@
 @extends('layouts.main')
 @section('contenu')
-<img src="{{ asset('img/a.jpg') }}" alt="">
+<img src="{{ asset('img/hcr.jpg') }}" alt="">
 
 @endsection

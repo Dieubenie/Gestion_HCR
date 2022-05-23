@@ -2,7 +2,7 @@
 @section('contenu')
 
 <div class="container">
-    <form method="POST" action="{{ route('insertion') }}">
+    <form method="POST" action="{{ route('insertion') }}" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Nom</label>
@@ -33,6 +33,10 @@
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Matricule</label>
             <input type="text" class="form-control" name="matricule" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Photo</label>
+            <input type="file" class="form-control" name="photo" id="photo" aria-describedby="emailHelp">
           </div>
           <div class="container d-flex">
               <div class="col">

@@ -38,7 +38,15 @@ class PersonnelController extends Controller
      */
     public function store(Request $request)
     {
-        Personnel::create($request->all());
+        Personnel::create([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'genre' => $request->genre,
+            'titre' => $request->titre,
+            'poste' => $request->poste,
+            'matricule' => $request->matricule,
+            'photo' => $request->photo->store('img_personnel','public')
+        ]);
         return redirect()->route('liste');
     }
 
@@ -84,6 +92,9 @@ class PersonnelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $personnel = Personnel::where('id', $id)->firstorfail()->delete();
+          echo ("Personnel Record deleted successfully.");
+          return redirect()->route('personnels.liste');
+
     }
 }
