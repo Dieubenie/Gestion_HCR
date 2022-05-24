@@ -2,7 +2,7 @@
 @section('contenu')
 
 <div class="container">
-    <form method="POST" action="{{ route('insertion') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('gestion_personnel.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Nom</label>

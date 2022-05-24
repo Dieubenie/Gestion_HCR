@@ -2,10 +2,6 @@
 @section('contenu')
 
 <div class="container">
-    @if (Session::has('supprimer'))
-    <span>{{ Session::get('supprimer') }}</span>
-
-    @endif
     <table class="table">
         <thead>
           <tr>
@@ -34,7 +30,7 @@
             <td><img src="{{ asset('storage').'/'.$personnel->photo }}" style="width: 25%" alt=""></td>
             <td> <a class="button" href="/personnels/{{ $personnel->id }}"><img src="{{ asset('img/businessman_48px.png') }}" alt=""> </a> </td>
             <td> <a class="button" href="/personnels/{{ $personnel->id }}"><img src="{{ asset('img/edit_file_48px.png') }}" alt=""></a> </td>
-            <td> <a class="button" href="/supprimer/{{ $personnel->id }}"><img src="{{ asset('img/trash_can_48px.png') }}" alt=""></a> </td>
+            <td> <a class="button" href="{{ url('supprimer/'.$personnel->id) }}"><img src="{{ asset('img/trash_can_48px.png') }}" alt=""></a> </td>
 
           </tr>
          @endforeach

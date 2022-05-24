@@ -46,8 +46,9 @@ class PersonnelController extends Controller
             'poste' => $request->poste,
             'matricule' => $request->matricule,
             'photo' => $request->photo->store('img_personnel','public')
+
         ]);
-        return redirect()->route('liste');
+        return redirect()->route('gestion_personnel.index');
     }
 
     /**
@@ -92,9 +93,10 @@ class PersonnelController extends Controller
      */
     public function destroy($id)
     {
-        $personnel = Personnel::where('id', $id)->firstorfail()->delete();
-          echo ("Personnel Record deleted successfully.");
-          return redirect()->route('personnels.liste');
+        $personnel = Personnel::find($id);
+        $personnel->delete();
+
+          return redirect()->route('gestion_personnel.index');
 
     }
 }

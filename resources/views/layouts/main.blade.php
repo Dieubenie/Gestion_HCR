@@ -17,11 +17,14 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active " style="color:white;"  aria-current="page" href="{{url('/') }}">Accueil</a>
+                  </li>
               <li class="nav-item">
-                <a class="nav-link active " style="color:white;"  aria-current="page" href="{{route('formulaire') }}">Formulaire</a>
+                <a class="nav-link active " style="color:white;"  aria-current="page" href="{{route('gestion_personnel.create') }}">Formulaire</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="{{route('liste') }}" style="color:white;" >Liste</a>
+                <a class="nav-link active" href="{{route('gestion_personnel.index') }}" style="color:white;" >Liste</a>
               </li>
             </ul>
             <form class="d-flex">
