@@ -28,8 +28,8 @@
             <td>{{$personnel->titre}}</td>
             <td>{{$personnel->matricule}}</td>
             <td><img src="{{ asset('storage').'/'.$personnel->photo }}" style="width: 25%" alt=""></td>
-            <td> <a class="button" href="/personnels/{{ $personnel->id }}"><img src="{{ asset('img/businessman_48px.png') }}" alt=""> </a> </td>
-            <td> <a class="button" href="/personnels/{{ $personnel->id }}"><img src="{{ asset('img/edit_file_48px.png') }}" alt=""></a> </td>
+            <td> <a class="button" href="{{route('gestion_personnel.show', [$personnel->id])  }}"><img src="{{ asset('img/businessman_48px.png') }}" alt=""> </a> </td>
+            <td> <a class="button" href="{{route('gestion_personnel.edit', [$personnel->id])  }}"><img src="{{ asset('img/edit_file_48px.png') }}" alt=""></a> </td>
             <td> <a class="button" href="{{ url('supprimer/'.$personnel->id) }}"><img src="{{ asset('img/trash_can_48px.png') }}" alt=""></a> </td>
 
           </tr>

@@ -59,7 +59,9 @@ class PersonnelController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('detail', [
+            'finds' => Personnel::find($id),
+        ]);
     }
 
     /**
@@ -70,7 +72,9 @@ class PersonnelController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('modifier', [
+            'finds' => Personnel::find($id),
+        ]);
     }
 
     /**
@@ -82,7 +86,10 @@ class PersonnelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pers = Personnel::find($id);
+        $pers ->update($request->all());
+
+        return redirect()->route('gestion_personnel.index');
     }
 
     /**
