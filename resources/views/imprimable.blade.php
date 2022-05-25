@@ -1,7 +1,8 @@
 @extends('layouts.main')
 @section('contenu')
-<h1 class="text-center m-3">Détails du personnel {{$finds->id}} </h1>
-<div class="card m-3" style="max-width: 540px;">
+<h1 class="text-center">Détails du personnel {{$finds->id}} </h1>
+<body onload="window.print()">
+<div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="{{ asset('storage').'/'.$finds->photo }}" class="img-fluid rounded-start" alt=""> <br> <br>
@@ -22,12 +23,7 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="d-grid gap-2 d-md-flex justify-content-md-first">
-  <a href="">
-  <button class="btn btn-outline-primary me-md-2" type="print">Imprimer la carte</button>
-  </a>
-    </div>
+</body>
 
 @endsection
 
